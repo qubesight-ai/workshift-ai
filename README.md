@@ -139,3 +139,64 @@ running service needs a restart):
 7. Persistence across application reconstruction, invalid citation rejection,
    credential rejection and duplicate prevention are demonstrated without real
    provider calls by `tests/memory.test.ts` in `npm test`.
+
+## Example Inputs and Outputs
+
+The following examples illustrate three workflows implemented in WORKSHIFT AI. They are based on previously observed application behavior and documented validation tests. They are not three separate live Nightshift generations.
+
+### Example 1 — Retrieve Occupational Evidence
+
+**Input:**
+- Occupation: `Chief Executives`
+- Action: Select occupation in the dashboard.
+
+**Observed output:**
+- 20 occupational task records.
+- 20 occupational skill records.
+- Source-backed occupational evidence available for inspection.
+
+**Technology:** Zetaris SQL API, O*NET 31.0, persistent SQLite evidence graph.
+
+**Purpose:** Retrieve structured occupational information before requesting AI-assisted analysis.
+
+### Example 2 — Retrieve a Previously Validated Analysis
+
+**Input:**
+- Occupation: `Chief Executives`
+- Action: `Retrieve prior analyses`
+
+**Observed output:**
+- A previously stored analysis associated with the selected occupation.
+- Four analysis sections:
+  - Responsibilities
+  - AI Assistance
+  - Human Oversight
+  - Reskilling
+- Supporting citations and model provenance.
+
+**Technology:** Meterless H-MEM and a previously completed Meterless Nightshift analysis using `meterless/text`.
+
+**Purpose:** Demonstrate persistent memory and retrieval without requiring a new inference request.
+
+### Example 3 — Reject an Unavailable or Unverified Analysis
+
+**Input:**
+- Occupation: `Chief Executives`
+- Action: `Analyze with AI`
+- Condition: AI provider request fails or the response cannot be verified.
+
+**Observed output:**
+
+`Analysis unavailable: provider failed or response/citations could not be verified. No unverified analysis was displayed.`
+
+**Technology:** Meterless Nightshift integration and application-level citation validation.
+
+**Purpose:** Demonstrate failure-safe behavior. The application does not display an unverified analysis as a validated result.
+
+### Technical Evidence
+
+- [Ingestion documentation](docs/evidence/ingestion.md)
+- [Ingestion execution traces](docs/evidence/ingestion-trace-sample.jsonl)
+- [AI analysis and memory documentation](docs/evidence/ai-memory.md)
+
+**Limitations:** These examples demonstrate data retrieval, memory persistence, and failure handling. They should not be interpreted as independent proof of three successful live AI inference requests.
