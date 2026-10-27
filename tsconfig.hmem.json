@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "target": "ES2023", "module": "NodeNext", "moduleResolution": "NodeNext",
+    "strict": true, "skipLibCheck": true, "declaration": true, "composite": true,
+    "rewriteRelativeImportExtensions": true, "rootDir": "vendor/hmem/src", "outDir": "dist/vendor/hmem/src"
+  },
+  "include": ["vendor/hmem/src/**/*.ts"]
+}

@@ -1,0 +1,25 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+.npm-cache/
+data/
+artifacts/
+
+# Private credentials
+.secrets/
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Vendored H-MEM dependencies
+vendor/**/node_modules/
+vendor/**/dist/
+vendor/**/coverage/
+
+# Temporary files
+*.log
+*.tmp
+.DS_Store

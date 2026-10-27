@@ -1,0 +1,20 @@
+{
+  "name": "workshift-ai",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13 <23"
+  },
+  "scripts": {
+    "build": "tsc -b tsconfig.hmem.json tsconfig.json",
+    "test": "npm run build && node --test --experimental-test-isolation=none dist/tests/*.test.js",
+    "demo": "npm run build && node dist/src/demo.js",
+    "dashboard": "npm run build && node dist/src/dashboard.js",
+    "ingest:real": "npm run build && node dist/src/real-demo.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "~5.9.3"
+  }
+}
