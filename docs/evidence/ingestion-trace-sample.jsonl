@@ -1,0 +1,10 @@
+{"at": "2026-10-26T19:28:04.317Z", "operation": "ingest", "status": "appended", "entityCount": 1}
+{"at": "2026-10-26T19:28:04.321Z", "operation": "ingest", "status": "appended", "entityCount": 1}
+{"at": "2026-10-26T19:28:04.323Z", "operation": "ingest", "status": "appended", "entityCount": 1}
+{"at": "2026-10-26T19:28:04.326Z", "operation": "ingest", "status": "appended", "entityCount": 1}
+{"at": "2026-10-26T19:28:04.328Z", "operation": "ingest", "status": "appended", "entityCount": 1}
+{"at": "2026-10-26T19:28:33.197Z", "operation": "ingest", "status": "duplicate", "entityCount": 2}
+{"at": "2026-10-26T19:28:33.197Z", "operation": "ingest", "status": "duplicate", "entityCount": 2}
+{"at": "2026-10-26T19:28:33.197Z", "operation": "ingest", "status": "duplicate", "entityCount": 2}
+{"at": "2026-10-26T19:28:33.198Z", "operation": "ingest", "status": "duplicate", "entityCount": 2}
+{"at": "2026-10-26T19:28:33.198Z", "operation": "ingest", "status": "duplicate", "entityCount": 2}
